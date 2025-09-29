@@ -1,0 +1,8 @@
+; CLEAR even bits of AX  
+; SET MSB and LSB of BL
+
+MOV AX, 2341H
+AND AX, 1010101010101010B   ; AND 0 -> CLEAR
+
+MOV BL, 31H
+OR  BL, 10000001B           ; OR 1 -> SET 
