@@ -5,4 +5,4 @@ MOV CX, 7
 
 FACTORIAL:
     MUL CX              ; AX = AL * CL ; Multiply AL wiht CL and store it in AX
-    LOOP FACTORIAL      ; CX != 0 and CX-- 
+    LOOP FACTORIAL      ; CX != 0 and CX-- ; By defualt LOOP Decrement CX
