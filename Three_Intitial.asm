@@ -11,12 +11,12 @@
 .DATA
     Promt DB "Enter Three Initials: $"
     endl DB 0DH,0AH, "$"
-    F DB ?
-    M DB ?
-    L DB ?
 .CODE
 
-MAIN PROC
+MAIN PROC 
+    MOV BX, 0001H
+    MOV CX, 3
+    
     MOV AX, @DATA       ; Laod Variable
     MOV DS, AX
     
@@ -24,45 +24,32 @@ MAIN PROC
     LEA DX, Promt
     INT 21H
     
-    MOV AH, 1           ; First initial input
-    INT 21H
-    MOV F, AL
-    
-    MOV AH, 1           ; Middle intial input
-    INT 21H
-    MOV M, AL
-    
-    MOV AH, 1           ; Last initial input
-    INT 21H
-    MOV L, AL                        
-       
-    MOV AH, 9           
-    LEA DX, endl        ; New Line
-    INT 21H
-    
-    MOV AH, 2           
-    MOV DL, F           ; First output 
-    INT 21H  
+    ONE:
+        MOV AH, 1
+        INT 21H
+        MOV [BX], AL    ; Loop to take 3 input
+        INC BX
+    LOOP ONE                        
              
-             
-    MOV AH, 9
-    LEA DX, endl        ; newline
-    INT 21H 
-            
-    MOV AH, 2
-    MOV DL, M           ; Middle output
-    INT 21H
-        
-    MOV AH, 9
-    LEA DX, endl        ; newline
-    INT 21H
-         
-    MOV AH, 2
-    MOV DL, L           ; Last output
-    INT 21H   
+    MOV CX, 3
+    SUB BX, 3  
+    
+    TWO:
+        MOV AH, 9
+        LEA DX, endl
+        INT 21H
+                         
+        MOV AH, 2       ; Loop for output
+        MOV DL, [BX]
+        INT 21H
+        INC BX
+    LOOP TWO     
         
     MOV AH, 4CH         ; return 0
     INT 21H
 
 MAIN ENDP
 END MAIN
+    
+    
+    
