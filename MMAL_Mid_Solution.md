@@ -132,7 +132,7 @@ AND AL, 01111111            ; AND 0 -> Clear
 
 | Symbol | Description          | Condition              |
 | ------ | -------------------- | ---------------------- |
-| `JG`   | Jump if greater than | $\text{ZF=0 and SF=0}$ |
+| `JG`   | Jump if greater than | $\text{ZF=SF}$ |
 | `JNZ`  | Jump if not zero     | $\text{ZF=0}$          |
 | `JC`   | Jump if carry        | $\text{CF=1}$          |
 
