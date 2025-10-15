@@ -58,7 +58,7 @@ An example is:
 XCHG AH, BL
 ```
 This instruction swaps the contents of `AH` and `BL`, so that `AH` contains what was previously in `BL` and `BL` contains what was originally in `AH`.
-###### b. What should be the status of flag registers after the execution of the following statement? Also write the result shown in the `AX` register after execution of the final instruction. <span style="float: right; ">03 </span>
+#### b. What should be the status of flag registers after the execution of the following statement? Also write the result shown in the `AX` register after execution of the final instruction. <span style="float: right; ">03 </span>
 ```asm
 MOV AX, 7102H
 MOV BX, 1024H
