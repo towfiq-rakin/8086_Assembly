@@ -69,11 +69,11 @@ INC AX
 **Ans:**
 Execution of the instructions:
 ```asm
-MOV AX, 7102H        ; 0111 0001 0000 0010
-MOV BX, 1024H        ; 0001 0000 0010 0100
-SUB AX, BX           ; 0110 0000 1101 1110 -> 60DE
-NOT AX               ; 1001 1111 0010 0001 -> 9F21
-INC AX               ; 1001 1111 0010 0010 -> 9F22
+MOV AX, 7102H	; 0111 0001 0000 0010
+MOV BX, 1024H   ; 0001 0000 0010 0100
+SUB AX, BX      ; 0110 0000 1101 1110 -> 60DE
+NOT AX          ; 1001 1111 0010 0001 -> 9F21
+INC AX          ; 1001 1111 0010 0010 -> 9F22
 ```
 
 Status of the flag register:
@@ -100,16 +100,16 @@ $$
 
 **Ans:** 
 ```asm
-MOV AX, 0                ; Counter for Series
+MOV AX, 0            ; Counter for Series
 MOV BX, 0               
-MOV CX, 13               ; Defualt counter for LOOP
+MOV CX, 13           ; Defualt counter for LOOP
 
 Continue:
-	INC AX               ; Increment AX by 1
-	ADD BX, AX           ; ADD BX with AX
-	LOOP Continue        ; Continue LOOP untill CX=0
+	INC AX           ; Increment AX by 1
+	ADD BX, AX       ; ADD BX with AX
+	LOOP Continue    ; Continue LOOP untill CX=0
 
-MOV AX, BX               ; Store the sum of Series in AX
+MOV AX, BX           ; Store the sum of Series in AX
 ```
 
 #### b. Give a logic instruction to do each of the following:<span style="float: right; ">03</span>
@@ -142,20 +142,20 @@ AND AL, 01111111            ; AND 0 -> Clear
 **Ans:** 
 ```asm
 MOV AL, 1                 
-MOV CX, 7                 ; 7! and Counter for LOOP
+MOV CX, 7			; 7! and Counter for LOOP
 
 factorial:
-	MUL CX                ; AX = AL * CL
-	LOOP factorial        ; Continue loop until CX = 0
+	MUL CX 			; AX = AL * CL
+	LOOP factorial  ; Continue loop until CX = 0
 
-CMP AX, 5D8FH             ; Compare Factorial with a random num
-                          ; Update SF and ZF flag
-JG above                  ; Jump if AX is greater
-MOV DX, AX                ; Move to DX if AX is smaller
+CMP AX, 5D8FH		; Compare Factorial with a random num
+					; Update SF and ZF flag
+JG above            ; Jump if AX is greater
+MOV DX, AX          ; Move to DX if AX is smaller
 HLT
 
 above:
-	MOV CX, AX            ; Move to CX if AX is greater
+	MOV CX, AX      ; Move to CX if AX is greater
 	HLT
 ```
 
