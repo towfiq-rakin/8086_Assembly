@@ -193,7 +193,7 @@ MOV AL, 10101001
 MOV CL, 3
 SHL AL, CL
 ```
-![[SHL.png]]
+![[assets/img/SHL.png]]
 **`SHR`** 
 The `SHR` (shift right) instruction shifts the bits in the destination to the right. The format for a single shift is:
 ```asm
@@ -210,15 +210,15 @@ MOV AL, 10101001
 MOV CL, 3
 SHR AL, CL
 ```
-![[SHR.png]]
+![[assets/img/SHR.png]]
 ###### b. Suppose `DH` contains `8AH`, `CF=1` and `CL` contains 3. What are the values of `DH` and `CF` after the instruction is executed:<span style="float: right; ">03</span>
 ```asm
 ROR DH, CL
 ```
 
 **Ans:** The given instruction is rotate right (`ROR`). As `CL` contains 3, the `ROR` instruction will rotate the content of `DH = 8AH` along right side.
-![[ROR.png]]
+![[assets/img/ROR.png]]
 Thus, after the execution of the instruction, `DH` holds `51H = 01010001B` and `CF` holds `0`.
 ###### c. Distinguish between contents and address of a memory.<span style="float: right; ">02</span>
 **Ans:** The address of a memory location is a **unique identification number** that is assigned to each memory cell where as content is the **actual data** that is stored in that memory cell.
-![[memory.png]]
+![[assets/img/memory.png]]
