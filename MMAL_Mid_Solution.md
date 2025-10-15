@@ -34,7 +34,7 @@ So, segment address `7500H` have the offset address `BFD2H`.
 **Ans:** The Bus Interface unit (BIU) facilitates communication between the EU and the memory or I/O circuits. It is responsible for transmitting addresses, data, and control signals on the buses. Its registers are named `CS, DS, ES, SS` and `IP`; they hold addresses of memory locations. The `IP` (instruction pointer) contains the address of the next instruction to be executed by the EU.
 
 ---
-### Questio n 2
+### Question 2
 #### a. Describe the `MOV` and `XCHG` instruction with necessary syntax and example.<span style="float: right; ">05 </span>
 **Ans:** 
 **`MOV`:** The `MOV` instruction is used to transfer data between registers, between a register and a memory location or to move directly into a register or memory location. The syntax is:
@@ -89,6 +89,7 @@ Differences between register and a memory location in 8086:
 | Registers are 16-bit in size (`AX,BX,CX,DX`)    | 8-bit (1 Byte ) in size                   |
 | Can be directly accessed by name (`MOV AX, BX`) | Requires Segment:Offset address to access |
 
+---
 ### Question 3
 #### a. Write a sequence of instruction to do the following series: <span style="float: right; ">05 </span>
 
