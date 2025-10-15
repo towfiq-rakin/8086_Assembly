@@ -221,4 +221,5 @@ ROR DH, CL
 Thus, after the execution of the instruction, `DH` holds `51H = 01010001B` and `CF` holds `0`.
 ###### c. Distinguish between contents and address of a memory.<span style="float: right; ">02</span>
 **Ans:** The address of a memory location is a **unique identification number** that is assigned to each memory cell where as content is the **actual data** that is stored in that memory cell.
+
 ![[assets/img/memory.png]](assets/img/memory.png)
