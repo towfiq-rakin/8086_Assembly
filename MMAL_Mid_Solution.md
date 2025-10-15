@@ -117,6 +117,7 @@ MOV AX, BX               ; Store the sum of Series in AX
 2. Clear the sign bit of `AL` while leaving the other bits unchanged.
 
 **Ans:**
+
 1. 
 ```asm
 AND AX, 1010101010101010    ; AND 0 -> Clear
