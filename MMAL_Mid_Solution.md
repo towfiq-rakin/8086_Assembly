@@ -16,6 +16,7 @@ Given,
 	$\text{Offset Address}=\text{BFD2H}$
 
 Thus,
+
 $$
 \begin{align} 
 \text{Segment Address} &= \frac{\text{Physical Address}-\text{Offset Address}}{\text{10H}} \\ \\
@@ -24,14 +25,15 @@ $$
 \text{Segment Address} &= \text{7500H} 
 \end{align} 
 $$
+
 So, segment address `7500H` have the offset address `BFD2H`.
 
-###### c. In the microprocessor what is the function of the IP and the BIU?<span style="float: right; ">02 </span>
+#### c. In the microprocessor what is the function of the IP and the BIU?<span style="float: right; ">02 </span>
 **Ans:** The Bus Interface unit (BIU) facilitates communication between the EU and the memory or I/O circuits. It is responsible for transmitting addresses, data, and control signals on the buses. Its registers are named `CS, DS, ES, SS` and `IP`; they hold addresses of memory locations. The `IP` (instruction pointer) contains the address of the next instruction to be executed by the EU.
 
 ---
 ### Questio n 2
-###### a. Describe the `MOV` and `XCHG` instruction with necessary syntax and example.<span style="float: right; ">05 </span>
+#### a. Describe the `MOV` and `XCHG` instruction with necessary syntax and example.<span style="float: right; ">05 </span>
 **Ans:** 
 **`MOV`:** The `MOV` instruction is used to transfer data between registers, between a register and a memory location or to move directly into a register or memory location. The syntax is:
 ```asm
@@ -76,7 +78,7 @@ Status of the flag register:
 | OF  | SF  | ZF  | AF  | PF  | CF  |
 | --- | --- | --- | --- | --- | --- |
 | 0   | 1   | 0   | 0   | 1   | 0   |
-###### c. What are the differences between a register and a memory location?<span style="float: right; ">02 </span>
+#### c. What are the differences between a register and a memory location?<span style="float: right; ">02 </span>
 **Ans:**
 Differences between register and a memory location in 8086:
 
@@ -86,10 +88,12 @@ Differences between register and a memory location in 8086:
 | Can be directly accessed by name (`MOV AX, BX`) | Requires Segment:Offset address to access |
 
 ### Question 3
-###### a. Write a sequence of instruction to do the following series: <span style="float: right; ">05 </span>
+#### a. Write a sequence of instruction to do the following series: <span style="float: right; ">05 </span>
+
 $$
 1+2+3+4+\dots+13
 $$
+
 **Ans:** 
 ```asm
 MOV AX, 0                ; Counter for Series
@@ -104,7 +108,7 @@ Continue:
 MOV AX, BX               ; Store the sum of Series in AX
 ```
 
-###### b. Give a logic instruction to do each of the following:<span style="float: right; ">03</span>
+#### b. Give a logic instruction to do each of the following:<span style="float: right; ">03</span>
 1. Clear the even-number bits of `AX` while leaving other bits unchanged.
 2. Clear the sign bit of `AL` while leaving the other bits unchanged.
 
@@ -118,7 +122,7 @@ AND AX, 1010101010101010    ; AND 0 -> Clear
 AND AL, 01111111            ; AND 0 -> Clear
 ```
 
-###### c.  What are the flag conditions of `JG`, `JNZ` and `JC`?<span style="float: right; ">02</span>
+#### c.  What are the flag conditions of `JG`, `JNZ` and `JC`?<span style="float: right; ">02</span>
 **Ans:**
 
 | Symbol | Description          | Condition              |
@@ -128,7 +132,7 @@ AND AL, 01111111            ; AND 0 -> Clear
 | `JC`   | Jump if carry        | $\text{CF=1}$          |
 
 ### Question 4
-###### a. Write an assembly language to find out the factorial of a number and compare it to a random number. If the factorial is above the number, it will store in `CX` otherwise it will store in `DX` register.<span style="float: right; ">05</span>
+#### a. Write an assembly language to find out the factorial of a number and compare it to a random number. If the factorial is above the number, it will store in `CX` otherwise it will store in `DX` register.<span style="float: right; ">05</span>
 **Ans:** 
 ```asm
 MOV AL, 1                 
@@ -149,7 +153,7 @@ above:
 	HLT
 ```
 
-###### b. Write down the significance of the following instructions. <span style="float: right; ">03</span>
+#### b. Write down the significance of the following instructions. <span style="float: right; ">03</span>
 1. `IMUL BX`
 2. `DIV BL`
 3. `MOV AX, [BX][SI]`
@@ -160,24 +164,30 @@ above:
 3. **`MOV AX, [BX][SI]`:** Base plus Index addressing mode. The effective address is formed by adding the base register `BX` and the index register `SI`. The content of final effective address (`BX+SI`) is moved to `AX` register.
 ###### c. How signed numbers are represented in microprocessor? Calculate the range of 4-bit number.<span style="float: right; ">02</span>
 **Ans:** Signed numbers are represented by 2's compliment in microprocessor. The **MSB** acts as a sign bit.
+
 $$
 \begin{align}
 0 &\to \text{Positive number} \\ \\
 1 &\to \text{Negative number}
 \end{align}
 $$
+
 The range of 4-bit positive number:
+
 $$
 0111_{b} \to 7_{d}  
 $$
+
 The range of 4-bit negative number (2's Compliment):
+
 $$
 (1000)_{b} \to -8_{d}
 $$
+
 Thus the range of 4-bit signed number is from $7\text{ to }-8$.
 
 ### Question 5
-###### a. Explain `SHL` and `SHL` instructions mentioning the syntax with proper example.<span style="float: right; ">05</span>
+#### a. Explain `SHL` and `SHL` instructions mentioning the syntax with proper example.<span style="float: right; ">05</span>
 **Ans:** 
 **`SHL`** 
 The `SHL` (shift left) instruction shifts the bits in the destination to the left. The format for a single shift is:
@@ -213,7 +223,7 @@ MOV CL, 3
 SHR AL, CL
 ```
 ![[assets/img/SHR.png]](assets/img/SHR.png)
-###### b. Suppose `DH` contains `8AH`, `CF=1` and `CL` contains 3. What are the values of `DH` and `CF` after the instruction is executed:<span style="float: right; ">03</span>
+#### b. Suppose `DH` contains `8AH`, `CF=1` and `CL` contains 3. What are the values of `DH` and `CF` after the instruction is executed:<span style="float: right; ">03</span>
 ```asm
 ROR DH, CL
 ```
@@ -221,7 +231,7 @@ ROR DH, CL
 **Ans:** The given instruction is rotate right (`ROR`). As `CL` contains 3, the `ROR` instruction will rotate the content of `DH = 8AH` along right side.
 ![[assets/img/ROR.png]](assets/img/ROR.png)
 Thus, after the execution of the instruction, `DH` holds `51H = 01010001B` and `CF` holds `0`.
-###### c. Distinguish between contents and address of a memory.<span style="float: right; ">02</span>
+#### c. Distinguish between contents and address of a memory.<span style="float: right; ">02</span>
 **Ans:** The address of a memory location is a **unique identification number** that is assigned to each memory cell where as content is the **actual data** that is stored in that memory cell.
 
 ![[assets/img/memory.png]](assets/img/memory.png)
