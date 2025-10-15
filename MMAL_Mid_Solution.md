@@ -12,7 +12,9 @@ $$
 $$
 
 Given, 
+	
 	$\text{Physical Address}=\text{80FD2H}$
+	
 	$\text{Offset Address}=\text{BFD2H}$
 
 Thus,
