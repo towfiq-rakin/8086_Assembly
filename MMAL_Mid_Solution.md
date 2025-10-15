@@ -167,7 +167,7 @@ above:
 1. **`IMUL BX`:** Signed multiplication of `AX` with `BX`. The higher 16-bit of the result is stored in `DX` register and lower 16-bit is stored in `AX` register. `DX` register preserves the sign of the result.
 2. **`DIV BL`:** Divide `AX` by `BL` . The quotient is stored in `AL` register while the reminder is stored in `AH` register.  
 3. **`MOV AX, [BX][SI]`:** Base plus Index addressing mode. The effective address is formed by adding the base register `BX` and the index register `SI`. The content of final effective address (`BX+SI`) is moved to `AX` register.
-###### c. How signed numbers are represented in microprocessor? Calculate the range of 4-bit number.<span style="float: right; ">02</span>
+#### c. How signed numbers are represented in microprocessor? Calculate the range of 4-bit number.<span style="float: right; ">02</span>
 **Ans:** Signed numbers are represented by 2's compliment in microprocessor. The **MSB** acts as a sign bit.
 
 $$
@@ -186,7 +186,7 @@ $$
 The range of 4-bit negative number (2's Compliment):
 
 $$
-(1000)_{b} \to -8_{d}
+1000_{b} \to -8_{d}
 $$
 
 Thus the range of 4-bit signed number is from $7\text{ to }-8$.
