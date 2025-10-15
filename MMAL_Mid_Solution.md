@@ -1,7 +1,7 @@
 # MMAL Mid Solve
 ### Question 1
 #### a. Consider a machine language instruction that moves a copy of the content of register `AX` in the CPU to a memory location. What happens during the fetch and execute cycle?<span style="float: right; ">05 </span>
-**Ans:** 
+**Ans:** Parina bhai
 
 #### b. A memory location has physical address `80FD2H`. In what segment does it have offset `BFD2H`? <span style="float: right; ">03 </span>
 **Ans:** As we know,
