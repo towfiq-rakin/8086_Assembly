@@ -1,3 +1,4 @@
+# MMAL Mid Solve
 ### Question 1
 #### a. Consider a machine language instruction that moves a copy of the content of register `AX` in the CPU to a memory location. What happens during the fetch and execute cycle?<span style="float: right; ">05 </span>
 **Ans:** 
