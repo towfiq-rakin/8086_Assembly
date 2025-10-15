@@ -136,6 +136,7 @@ AND AL, 01111111            ; AND 0 -> Clear
 | `JNZ`  | Jump if not zero     | $\text{ZF=0}$          |
 | `JC`   | Jump if carry        | $\text{CF=1}$          |
 
+---
 ### Question 4
 #### a. Write an assembly language to find out the factorial of a number and compare it to a random number. If the factorial is above the number, it will store in `CX` otherwise it will store in `DX` register.<span style="float: right; ">05</span>
 **Ans:** 
@@ -191,6 +192,7 @@ $$
 
 Thus the range of 4-bit signed number is from $7\text{ to }-8$.
 
+---
 ### Question 5
 #### a. Explain `SHL` and `SHL` instructions mentioning the syntax with proper example.<span style="float: right; ">05</span>
 **Ans:** 
