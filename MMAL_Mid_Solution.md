@@ -169,7 +169,7 @@ above:
 2. **`DIV BL`:** Divide `AX` by `BL` . The quotient is stored in `AL` register while the reminder is stored in `AH` register.  
 3. **`MOV AX, [BX][SI]`:** Base plus Index addressing mode. The effective address is formed by adding the base register `BX` and the index register `SI`. The content of final effective address (`BX+SI`) is moved to `AX` register.
 #### c. How signed numbers are represented in microprocessor? Calculate the range of 4-bit number.<span style="float: right; ">02</span>
-**Ans:** Signed numbers are represented by 2's compliment in microprocessor. The **MSB** acts as a sign bit.
+**Ans:** Signed numbers are represented by **2's compliment** in microprocessor. The **MSB** acts as a sign bit.
 
 $$
 \begin{align}
