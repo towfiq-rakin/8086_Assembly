@@ -4,11 +4,13 @@
 
 ###### b. A memory location has physical address `80FD2H`. In what segment does it have offset `BFD2H`? <span style="float: right; ">03 </span>
 **Ans:** As we know,
+
 $$
 \begin{align}
 \text{Physical Address}=\text{Segment Address} \times \text{10H }+ \text{Offset Address}
 \end{align}
 $$
+
 Given, 
 	$\text{Physical Address}=\text{80FD2H}$
 	$\text{Offset Address}=\text{BFD2H}$
