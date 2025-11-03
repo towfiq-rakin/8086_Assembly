@@ -1,0 +1,115 @@
+
+----------------Bit Shifting ------------------
+
+MOV DH, 2AH
+SAL DH, 1      
+
+MOV DH, 2AH
+SAL DH, 3      
+
+MOV CL, 03
+SAL CL, 1       
+
+MOV CL, 03
+SAL CL, 7      
+------------------------------------------------
+
+
+------------ Masking -------------------------
+MOV AX, 2341H
+AND AX, 1010101010101010B  
+
+MOV BL, 31H
+OR  BL, 10000001B          
+-------------------------------------------------
+
+
+
+--------------- compare two number -------------
+MOV AL, 29H
+MOV CL, 41H
+
+CMP AL, CL         
+JL AL_Smaller       
+JG CL_Smaller       
+
+AL_Smaller:
+    MOV BL, AL
+    MOV BH, CL
+HLT
+
+CL_Smaller:
+    MOV BL, CL
+    MOV BH, AL
+HLT 
+---------------------------------------------
+
+
+------------- Even odd ---------------------
+MOV AL, 03H
+MOV BL, 04H
+
+TEST AL, 01H       
+JZ AL_EVEN          
+JNZ AL_ODD          
+
+AL_EVEN:
+    MOV DL, AL
+    JMP GO
+AL_ODD:
+    MOV DH, AL
+    
+GO:
+TEST BL, 01H
+JZ BL_EVEN
+JNZ BL_ODD
+
+BL_EVEN:
+    MOV DL, BL
+    HLT
+BL_ODD:
+    MOV DH, BL
+
+----------------- ----------factorial ----------------
+MOV AX, 1
+MOV CX, 7
+
+FACTORIAL:
+    MUL CX             
+    LOOP FACTORIAL      
+--------------------------------------------------------------------
+
+
+------------ODD Series Sum, 1+3+5+7...+15 --------------------------
+
+MOV AX, 0
+MOV CX, 1
+
+SERIES:
+    ADD AX, CX
+    ADD CX, 2       
+    CMP CX, 15      
+    JBE SERIES      
+HLT 
+
+------------------------------------------------------------------------
+
+
+
+--------------Square Series Sum of 1^2 + 2^2 + 3^2 + 4^2-----------------
+
+MOV AX, 1
+MOV CX, 1           
+
+SERIES:
+    MOV AL, CL     
+    MUL CL          
+    ADD BX, AX      
+    INC CX         
+    CMP CX, 4       
+    JBE SERIES      
+    
+MOV AX, BX          
+HLT 
+
+-------------------------------------------------------------------------
